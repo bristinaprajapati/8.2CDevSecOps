@@ -31,7 +31,7 @@ pipeline {
         }
         stage('SonarCloud Analysis') {
             steps {
-                sh 'npx sonarqube-scanner -Dsonar.token=${SONAR_TOKEN} -Dsonar.javascript.node.maxSpace=4096 -Dsonar.javascript.skipNodeDetection=true'
+                sh 'npx sonarqube-scanner -Dsonar.token=${SONAR_TOKEN}'
             }
         }
     }
