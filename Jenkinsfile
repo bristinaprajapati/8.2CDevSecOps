@@ -31,7 +31,7 @@ pipeline {
         }
         stage('SonarCloud Analysis') {
             steps {
-                sh 'npx sonarqube-scanner -Dsonar.token=${SONAR_TOKEN} -Dsonar.nodejs.executable=/usr/bin/node'
+                sh 'npx sonarqube-scanner -Dsonar.token=${SONAR_TOKEN}'
             }
         }
     }
